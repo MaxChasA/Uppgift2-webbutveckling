@@ -1,0 +1,325 @@
+body {
+    background-color: #f1f1f1;
+    font-family: 'Helvetica', sans-serif;
+    margin: 0px;
+}
+
+body.dark-theme {
+    color: #eee;
+    background: #121212;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: medium;
+}
+
+#header {
+    height: 200px;
+    background-color: #222222;
+    background-image: url(photo-1468581264429-2548ef9eb732.jpg);
+    background-size: cover;
+}
+
+body.dark-theme #header {
+    background-image: none;
+
+}
+
+#hej {
+    background-color: #f1f1f1;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+}
+
+body.dark-theme #hej {
+    background: #121212;
+    color: #eee;
+}
+
+#nav {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+body.dark-theme #nav {
+    background: #121212;
+}
+
+#nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    border: 1px solid black;
+    border-left: 0;
+
+}
+
+body.dark-theme #nav a {
+    color: #eee;
+    background: #121212;
+    border: 1px solid #eee;
+}
+
+#nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+body.dark-theme #nav a:hover {
+    color: #121212;
+    background: #eee;
+}
+
+#nav a:focus {
+    background-color: black;
+    color: white;
+}
+
+body.dark-theme #nav a:focus {
+    color: #121212;
+    background: #eee;
+}
+
+#nav button {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+body.dark-theme #nav button {
+    color: #eee;
+    background-color: #121212;
+    border: 1px solid white
+}
+
+#nav button:hover {
+    background-color: black;
+    color: white;
+}
+
+body.dark-theme #nav button:hover {
+    color: #121212;
+    background-color: #eee;
+}
+
+#nav button:focus {
+    background-color: black;
+    color: white;
+    border: 1px dotted;
+}
+
+body.dark-theme #nav button:focus {
+    color: #121212;
+    background-color: #eee;
+}
+
+#main {
+    background-color: black;
+    width: 95%;
+    margin: auto;
+}
+
+#flex {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(245, 245, 245);
+    flex-wrap: wrap;
+}
+
+body.dark-theme #flex {
+    background: #222222;
+}
+
+
+#profilbild {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    margin-left: 0px;
+    margin-top: -90px;
+    position: relative;
+}
+
+body.dark-theme #profilbild {
+    border: 10px solid #121212;
+    filter: brightness(70%);
+}
+
+#ommig {
+    background-color: white;
+    border-radius: 1%;
+    padding: 30px;
+    margin: 200px 10px;
+    width: 600px;
+    border: lightgray 1px solid;
+}
+
+body.dark-theme #ommig {
+    background: #121212;
+}
+
+#projektbild {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    margin-left: 0px;
+    margin-top: -90px;
+    position: relative;
+}
+
+body.dark-theme #projektbild {
+    border: 10px solid #121212;
+    filter: brightness(70%);
+}
+
+#demo {
+    height: 300px;
+    float: right;
+    margin-right: 20px;
+}
+
+body.dark-theme #demo {
+    filter: brightness(70%);
+}
+
+#projekt {
+    background-color: white;
+    border-radius: 1%;
+    padding: 30px;
+    margin: 200px 10px;
+    width: 600px;
+    border: lightgray 1px solid;
+}
+
+body.dark-theme #projekt {
+    background: #121212;
+}
+
+
+.button {
+    border: 1px solid black;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 3%;
+}
+
+body.dark-theme .button {
+    color: #eee;
+    background-color: #121212;
+    border: 1px solid white
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+body.dark-theme .button:hover {
+    color: #121212;
+    background-color: #eee;
+}
+
+.button:focus {
+    background-color: black;
+    color: white;
+    border: 1px dotted;
+}
+
+body.dark-theme .button:focus {
+    color: #121212;
+    background-color: #eee;
+}
+
+#footer {
+    background-color: #ffffff;
+    height: 100px;
+    text-align: center;
+}
+
+body.dark-theme #footer {
+    background-color: #121212;
+}
+
+
+
+@media (max-width: 1330px) {
+    #ommig {
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+    #projekt {
+        width: 80%;
+        margin: 0px 10px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    #nav button {
+        float: left;
+    }
+
+    #main {
+        width: 100%;
+    }
+
+    #ommig {
+        width: 95%;
+        margin: 100px 10px;
+    }
+
+    #projekt {
+        width: 95%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ommig {
+        width: 100%;
+        margin: 100px 0px;
+        padding: 15px;
+    }
+
+    #projekt {
+        width: 100%;
+        margin: 0px;
+        padding: 15px;
+    }
+
+    #demo {
+        float: none;
+    }
+}
