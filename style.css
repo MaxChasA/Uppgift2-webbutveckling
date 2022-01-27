@@ -45,11 +45,25 @@ body.dark-theme #hej {
 #nav {
     background-color: #ffffff;
     overflow: hidden;
+    z-index: 999;
 }
+
+.content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
 
 body.dark-theme #nav {
     background: #121212;
 }
+
+
 
 #nav a {
     float: left;
@@ -264,7 +278,6 @@ body.dark-theme .button:focus {
 body.dark-theme #footer {
     background-color: #121212;
 }
-
 
 
 @media (max-width: 1330px) {

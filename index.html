@@ -25,11 +25,13 @@
 
         <!--Navigationsbar, länkar i nuläget till olika rubriker på webbplatsen, då jag inte har skapat några undersidor.-->
         <nav class="topnav" id="nav">
-            <a href="#hem" >Hem</a>
+
             <a href="#ommig">Om mig</a>
             <a href="#projekt">Projekt</a>
             <!--Knapp för att aktivera darkmode på sidan.-->
             <button class="btn-toggle" id="buttondark">Dark-Mode</button>
+
+            
             <!--Script för att aktivera darkmode på sidan via JS och CSS. Jag trodde att det skulle ta tid, men det gick smidigt att kovertera koden när det väl kom igång! -->
             <script>
                 const btn = document.querySelector(".btn-toggle");
@@ -37,6 +39,26 @@
                 btn.addEventListener("click", function () {
                     document.body.classList.toggle("dark-theme");
                 });
+
+                // Startar funktionen vid scrollning på sidan
+                window.onscroll = function () {
+                    myFunction()
+                };
+
+                // Hämtar navigationsmenyn och skapar en variabel för den. 
+                var navbar = document.getElementById("nav");
+
+                // Hämtar positionen
+                var sticky = navbar.offsetTop;
+
+                // Lägger till stickyclassen (i CSS) när hamnar på en viss position. Tar bort sticky när den lämnar. 
+                function myFunction() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                }
             </script>
         </nav>
         <!--END NAV-->
@@ -74,7 +96,7 @@
                         <br>
                         Mer om mig:
                         <br>
-                    <a href="MaxLund.pdf" target="_blank" class="button">CV</a>
+                        <a href="MaxLund.pdf" target="_blank" class="button">CV</a>
                     </p>
                 </article>
 
@@ -89,13 +111,15 @@
                         Det är en app-prototyp framtagen inom området hållbarhet och skapats utifrån design
                         thinking-processen.
                         <br>
-                        
+
 
                         <br><br>
                         Mer om projektet:
                         <br>
-                        <a href="https://docs.google.com/presentation/d/1Rp78FXsq-nzKuSGLM_YHkRIfyrARY2O6_4LCn3YhBhc/edit?usp=sharing" target="_blank" class="button">Projektpresentation</a>
-                        <a href="https://www.figma.com/file/9Hl5GFMkLBJrCLFtPa9Vb2/Untitled?node-id=0%3A1" target="_blank" class="button">Prototyp i Figma</a>
+                        <a href="https://docs.google.com/presentation/d/1Rp78FXsq-nzKuSGLM_YHkRIfyrARY2O6_4LCn3YhBhc/edit?usp=sharing"
+                            target="_blank" class="button">Projektpresentation</a>
+                        <a href="https://www.figma.com/file/9Hl5GFMkLBJrCLFtPa9Vb2/Untitled?node-id=0%3A1"
+                            target="_blank" class="button">Prototyp i Figma</a>
                     </p>
                 </article>
             </div>
